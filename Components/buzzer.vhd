@@ -12,7 +12,7 @@ end entity buzzer_controller;
 
 architecture behavioral of buzzer_controller is
     constant FREQ_HZ : integer := 1000; -- Desired buzzer frequency in Hz
-    constant CLK_FREQ_HZ : integer := 50_000_000; -- System clock frequency in Hz (e.g., 50 MHz)
+    constant CLK_FREQ_HZ : integer := 100_000_000; -- System clock frequency in Hz (e.g., 100 MHz for our FPGA)
     constant HALF_PERIOD_COUNT : integer := (CLK_FREQ_HZ / (2 * FREQ_HZ)) - 1;
 
     signal counter : natural range 0 to HALF_PERIOD_COUNT;
