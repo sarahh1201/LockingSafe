@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/shy_h/Downloads/iwannadie/iwannadie.runs/synth_1/safe_top.tcl"
+  variable script "C:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.runs/synth_1/safe_top.tcl"
   variable category "vivado_synth"
 }
 
@@ -58,8 +58,9 @@ if {$::dispatch::connected} {
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 5
 set_param checkpoint.writeSynthRtdsInDcp 1
-set_param synth.incrementalSynthesisCache C:/Users/shy_h/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-27980-sh1201/incrSyn
+set_param synth.incrementalSynthesisCache C:/Users/shy_h/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-23900-sh1201/incrSyn
 set_param xicom.use_bs_reader 1
+set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
@@ -68,23 +69,23 @@ create_project -in_memory -part xc7a35ticpg236-1L
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/Users/shy_h/Downloads/iwannadie/iwannadie.cache/wt [current_project]
-set_property parent.project_path C:/Users/shy_h/Downloads/iwannadie/iwannadie.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.cache/wt [current_project]
+set_property parent.project_path C:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
-set_property ip_output_repo c:/Users/shy_h/Downloads/iwannadie/iwannadie.cache/ip [current_project]
+set_property ip_output_repo c:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib {
-  C:/Users/shy_h/Downloads/iwannadie/iwannadie.srcs/sources_1/new/Decoder.vhd
-  C:/Users/shy_h/Downloads/iwannadie/iwannadie.srcs/sources_1/new/DisplayController.vhd
-  C:/Users/shy_h/Downloads/iwannadie/iwannadie.srcs/sources_1/new/PmodKYPD.vhd
-  C:/Users/shy_h/Downloads/iwannadie/iwannadie.srcs/sources_1/new/alarm.vhd
-  C:/Users/shy_h/Downloads/iwannadie/iwannadie.srcs/sources_1/new/controller.vhd
-  C:/Users/shy_h/Downloads/iwannadie/iwannadie.srcs/sources_1/new/lockingmotor.vhd
-  C:/Users/shy_h/Downloads/iwannadie/iwannadie.srcs/sources_1/new/passcode_checker.vhd
-  C:/Users/shy_h/Downloads/iwannadie/iwannadie.srcs/sources_1/new/top.vhd
+  C:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.srcs/sources_1/new/Decoder.vhd
+  C:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.srcs/sources_1/new/DisplayController.vhd
+  C:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.srcs/sources_1/new/PmodKYPD.vhd
+  C:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.srcs/sources_1/new/alarm.vhd
+  C:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.srcs/sources_1/new/controller.vhd
+  C:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.srcs/sources_1/new/lockingmotor.vhd
+  C:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.srcs/sources_1/new/passcode_checker.vhd
+  C:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.srcs/sources_1/new/top.vhd
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -95,12 +96,12 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/shy_h/Downloads/iwannadie/iwannadie.srcs/constrs_1/new/safe.xdc
-set_property used_in_implementation false [get_files C:/Users/shy_h/Downloads/iwannadie/iwannadie.srcs/constrs_1/new/safe.xdc]
+read_xdc C:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.srcs/constrs_1/new/safe.xdc
+set_property used_in_implementation false [get_files C:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.srcs/constrs_1/new/safe.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental C:/Users/shy_h/Downloads/iwannadie/iwannadie.srcs/utils_1/imports/synth_1/safe_top.dcp
+read_checkpoint -auto_incremental -incremental C:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.srcs/utils_1/imports/synth_1/safe_top.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35ticpg236-1L" LaunchTime="1764295853" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/safe_top.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7a35ticpg236-1L" LaunchTime="1764299147" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/safe_top.dcp">
+  <File Type="PA-TCL" Name="safe_top.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="safe_top_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="safe_top_reports.tcl"/>
+  <File Type="RDS-RDS" Name="safe_top.vds"/>
   <File Type="RDS-UTIL" Name="safe_top_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="safe_top_utilization_synth.pb"/>
-  <File Type="PA-TCL" Name="safe_top.tcl"/>
-  <File Type="RDS-RDS" Name="safe_top.vds"/>
   <File Type="RDS-DCP" Name="safe_top.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="safe_top_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="safe_top_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/Decoder.vhd">
