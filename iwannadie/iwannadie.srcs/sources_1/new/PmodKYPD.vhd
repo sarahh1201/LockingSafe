@@ -34,19 +34,10 @@ architecture Structural of PmodKYPD_top is
 
     component DisplayController is
         Port (
+         clk : in STD_LOGIC;
             DispVal : in  STD_LOGIC_VECTOR(3 downto 0);
             anode   : out STD_LOGIC_VECTOR(3 downto 0);
             segOut  : out STD_LOGIC_VECTOR(6 downto 0)
-        );
-    end component;
-
-    component passcode_checker is
-        Port (
-            clk           : in  STD_LOGIC;
-            reset         : in  STD_LOGIC;
-            load          : in  STD_LOGIC;
-            digit_in      : in  STD_LOGIC_VECTOR(3 downto 0);
-            passcode_flag : out STD_LOGIC
         );
     end component;
 
@@ -66,23 +57,13 @@ begin
 
     -- Load digit on key press
     load_digit <= key_valid;
-
-    -- Passcode checker instantiation
-    PASSCHK : passcode_checker
-        port map(
-            clk           => clk,
-            reset         => reset,
-            load          => load_digit,
-            digit_in      => Decode,
-            passcode_flag => passcode_flag
-        );
-
     -- Output the current digit
     digit <= Decode;
 
     -- Display controller
     DSP : DisplayController
         port map(
+        clk => clk,
             DispVal => Decode,
             anode   => an,
             segOut  => seg

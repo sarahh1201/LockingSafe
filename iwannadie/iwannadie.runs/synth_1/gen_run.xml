@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35ticpg236-1L" LaunchTime="1764300378" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/safe_top.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7a35ticpg236-1L" LaunchTime="1764305458" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/safe_top.dcp">
   <File Type="PA-TCL" Name="safe_top.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="safe_top_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="safe_top_reports.tcl"/>
@@ -42,12 +42,6 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/lockingmotor.vhd">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/passcode_checker.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>

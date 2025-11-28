@@ -28,25 +28,24 @@ begin
 process (clk, reset)
 begin
     if reset = '1' then
-        state <= LOCKED;
-        load  <= '0';
-        done  <= '0';
-        lock_cmd <= '1';
+        state      <= LOCKED;
+        load       <= '0';
+        done       <= '0';
+        lock_cmd   <= '1';
         unlock_cmd <= '0';
         alarmState <= '0';
 
     elsif rising_edge(clk) then
-
         case state is
 
             ----------------------------------------------------------------
             when LOCKED =>
             ----------------------------------------------------------------
-                load        <= '0';
-                done        <= '0';
-                lock_cmd    <= '1';
-                unlock_cmd  <= '0';
-                alarmState  <= '0';
+                load       <= '0';
+                done       <= '0';
+                lock_cmd   <= '1';
+                unlock_cmd <= '0';
+                alarmState <= '0';
 
                 if start = '1' then
                     state <= CHECK_PASSWORD;
@@ -55,8 +54,13 @@ begin
             ----------------------------------------------------------------
             when CHECK_PASSWORD =>
             ----------------------------------------------------------------
-                load <= '1';   -- accept keypad input
+                load       <= '1';   -- latch keypad digit
+                done       <= '0';
+                lock_cmd   <= '1';
+                unlock_cmd <= '0';
+                alarmState <= '0';
 
+                -- decide based on passcode_flag
                 if passcode_flag = '1' then
                     state <= UNLOCKED;
                 else
@@ -67,7 +71,7 @@ begin
             when UNLOCKED =>
             ----------------------------------------------------------------
                 load       <= '0';
-                done       <= '1';
+                done       <= '1';   -- signal success
                 unlock_cmd <= '1';
                 lock_cmd   <= '0';
                 alarmState <= '0';
@@ -79,11 +83,14 @@ begin
             ----------------------------------------------------------------
             when ERROR =>
             ----------------------------------------------------------------
+                load       <= '0';
                 done       <= '0';
                 lock_cmd   <= '1';
                 unlock_cmd <= '0';
-                alarmState <= '1';  -- turn on buzzer
-                state      <= LOCKED;
+                alarmState <= '1';  -- buzzer on
+
+                -- return to locked after error
+                state <= LOCKED;
 
         end case;
     end if;

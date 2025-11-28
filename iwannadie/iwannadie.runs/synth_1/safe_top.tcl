@@ -84,7 +84,6 @@ read_vhdl -library xil_defaultlib {
   C:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.srcs/sources_1/new/alarm.vhd
   C:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.srcs/sources_1/new/controller.vhd
   C:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.srcs/sources_1/new/lockingmotor.vhd
-  C:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.srcs/sources_1/new/passcode_checker.vhd
   C:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.srcs/sources_1/new/top.vhd
 }
 OPTRACE "Adding files" END { }

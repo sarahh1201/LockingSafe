@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Thu Nov 27 18:57:53 2025
-# Process ID: 21480
+# Start of session at: Thu Nov 27 20:51:49 2025
+# Process ID: 14796
 # Current directory: C:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.runs/impl_1
 # Command line: vivado.exe -log safe_top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source safe_top.tcl -notrace
 # Log file: C:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.runs/impl_1/safe_top.vdi
@@ -17,8 +17,8 @@
 # CPU Physical cores:14
 # CPU Logical cores :20
 # Host memory       :16873 MB
-# Swap memory       :7497 MB
-# Total Virtual     :24370 MB
-# Available Virtual :2731 MB
+# Swap memory       :11881 MB
+# Total Virtual     :28755 MB
+# Available Virtual :2975 MB
 #-----------------------------------------------------------
 source safe_top.tcl -notrace
