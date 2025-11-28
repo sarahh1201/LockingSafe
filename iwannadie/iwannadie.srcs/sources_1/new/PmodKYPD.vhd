@@ -9,8 +9,6 @@ entity PmodKYPD_top is
         JA         : inout  STD_LOGIC_VECTOR(7 downto 0); -- Only input
         an         : out STD_LOGIC_VECTOR(3 downto 0);
         seg        : out STD_LOGIC_VECTOR(7 downto 0);
-        enter_flag : out STD_LOGIC;
-        clear_flag : out STD_LOGIC;
         key_valid  : inout STD_LOGIC;
         digit      : out STD_LOGIC_VECTOR(3 downto 0);
         passcode_flag : out STD_LOGIC   -- New output
@@ -31,9 +29,6 @@ architecture Structural of PmodKYPD_top is
             Row        : in  STD_LOGIC_VECTOR(3 downto 0);
             Col        : out STD_LOGIC_VECTOR(3 downto 0);
             DecodeOut  : out STD_LOGIC_VECTOR(3 downto 0);
-            enter_flag : out STD_LOGIC;
-            clear_flag : out STD_LOGIC;
-            input_flag : out STD_LOGIC
         );
     end component;
 
@@ -66,10 +61,7 @@ begin
             clk        => clk,
             Row        => JA(7 downto 4),
             Col        => Col_sig,
-            DecodeOut  => Decode,
-            enter_flag => enter_flag,
-            clear_flag => clear_flag,
-            input_flag => key_valid
+            DecodeOut  => Decode
         );
 
     -- Load digit on key press

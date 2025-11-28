@@ -30,7 +30,7 @@ architecture Structural of safe_top is
         clear_flag : out STD_LOGIC;
         key_valid  : inout STD_LOGIC;
         digit      : out STD_LOGIC_VECTOR(3 downto 0);
-        passcode_flag : out STD_LOGIC   -- New output
+        passcode_flag : out STD_LOGIC   
     );
     end component;
 

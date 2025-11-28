@@ -9,17 +9,11 @@ entity Decoder is
           Row : in  STD_LOGIC_VECTOR (3 downto 0);
 			 Col : out  STD_LOGIC_VECTOR (3 downto 0);
           DecodeOut : out  STD_LOGIC_VECTOR (3 downto 0));
-          enter_flag : out in  STD_LOGIC;
-          clear_flag : out in  STD_LOGIC;
-          input_flag : out in  STD_LOGIC;
 end Decoder;
 
 architecture Behavioral of Decoder is
 
 signal sclk :STD_LOGIC_VECTOR(19 downto 0);
-signal back_sig : STD_LOGIC;
-signal enter_sig : STD_LOGIC;
-signal input_sig : STD_LOGIC;
 begin
 	process(clk)
 		begin 
@@ -115,10 +109,6 @@ begin
 				sclk <= sclk+1;	
 			end if;
 		end if;
-		
-		enter_flag <= enter_sig;
-		clear_flag <= enter_sig;
-		enter_flag <= enter_sig;
 	end process;
 						 
 end Behavioral;
