@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Thu Nov 27 19:05:49 2025
-# Process ID: 15028
+# Start of session at: Thu Nov 27 19:26:21 2025
+# Process ID: 28464
 # Current directory: C:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.runs/synth_1
 # Command line: vivado.exe -log safe_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source safe_top.tcl
 # Log file: C:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.runs/synth_1/safe_top.vds
@@ -17,12 +17,12 @@
 # CPU Physical cores:14
 # CPU Logical cores :20
 # Host memory       :16873 MB
-# Swap memory       :7497 MB
-# Total Virtual     :24370 MB
-# Available Virtual :1790 MB
+# Swap memory       :8577 MB
+# Total Virtual     :25451 MB
+# Available Virtual :2386 MB
 #-----------------------------------------------------------
 source safe_top.tcl -notrace
-create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 530.125 ; gain = 200.855
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 530.082 ; gain = 199.238
 Command: read_checkpoint -auto_incremental -incremental C:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.srcs/utils_1/imports/synth_1/safe_top.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.srcs/utils_1/imports/synth_1/safe_top.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -36,9 +36,9 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 15216
+INFO: [Synth 8-7075] Helper process launched with PID 25100
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1384.215 ; gain = 448.160
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1384.988 ; gain = 447.938
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'safe_top' [C:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.srcs/sources_1/new/top.vhd:17]
 INFO: [Synth 8-3491] module 'PmodKYPD_top' declared at 'C:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.srcs/sources_1/new/PmodKYPD.vhd:5' bound to instance 'U1_PmodKYPD' of component 'PmodKYPD_top' [C:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.srcs/sources_1/new/top.vhd:87]
@@ -49,15 +49,11 @@ INFO: [Synth 8-256] done synthesizing module 'Decoder' (0#1) [C:/Users/shy_h/Doc
 INFO: [Synth 8-3491] module 'passcode_checker' declared at 'C:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.srcs/sources_1/new/passcode_checker.vhd:5' bound to instance 'PASSCHK' of component 'passcode_checker' [C:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.srcs/sources_1/new/PmodKYPD.vhd:71]
 INFO: [Synth 8-638] synthesizing module 'passcode_checker' [C:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.srcs/sources_1/new/passcode_checker.vhd:15]
 INFO: [Synth 8-256] done synthesizing module 'passcode_checker' (0#1) [C:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.srcs/sources_1/new/passcode_checker.vhd:15]
+WARNING: [Synth 8-5640] Port 'clk' is missing in component declaration [C:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.srcs/sources_1/new/PmodKYPD.vhd:35]
 WARNING: [Synth 8-5640] Port 'passcode_flag' is missing in component declaration [C:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.srcs/sources_1/new/PmodKYPD.vhd:35]
-INFO: [Synth 8-3491] module 'DisplayController' declared at 'C:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.srcs/sources_1/new/DisplayController.vhd:6' bound to instance 'DSP' of component 'DisplayController' [C:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.srcs/sources_1/new/PmodKYPD.vhd:84]
-INFO: [Synth 8-638] synthesizing module 'DisplayController' [C:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.srcs/sources_1/new/DisplayController.vhd:19]
-INFO: [Synth 8-226] default block is never used [C:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.srcs/sources_1/new/DisplayController.vhd:43]
-WARNING: [Synth 8-614] signal 'pass_index' is read in the process but is not in the sensitivity list [C:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.srcs/sources_1/new/DisplayController.vhd:41]
-WARNING: [Synth 8-614] signal 'pass_temp' is read in the process but is not in the sensitivity list [C:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.srcs/sources_1/new/DisplayController.vhd:41]
-WARNING: [Synth 8-614] signal 'pass_true' is read in the process but is not in the sensitivity list [C:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.srcs/sources_1/new/DisplayController.vhd:41]
-WARNING: [Synth 8-614] signal 'pass_check' is read in the process but is not in the sensitivity list [C:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.srcs/sources_1/new/DisplayController.vhd:41]
-INFO: [Synth 8-256] done synthesizing module 'DisplayController' (0#1) [C:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.srcs/sources_1/new/DisplayController.vhd:19]
+INFO: [Synth 8-3491] module 'DisplayController' declared at 'C:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.srcs/sources_1/new/DisplayController.vhd:5' bound to instance 'DSP' of component 'DisplayController' [C:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.srcs/sources_1/new/PmodKYPD.vhd:84]
+INFO: [Synth 8-638] synthesizing module 'DisplayController' [C:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.srcs/sources_1/new/DisplayController.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'DisplayController' (0#1) [C:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.srcs/sources_1/new/DisplayController.vhd:15]
 INFO: [Synth 8-256] done synthesizing module 'PmodKYPD_top' (0#1) [C:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.srcs/sources_1/new/PmodKYPD.vhd:18]
 INFO: [Synth 8-3491] module 'controller' declared at 'C:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.srcs/sources_1/new/controller.vhd:5' bound to instance 'U3_controller' of component 'controller' [C:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.srcs/sources_1/new/top.vhd:100]
 INFO: [Synth 8-638] synthesizing module 'controller' [C:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.srcs/sources_1/new/controller.vhd:21]
@@ -70,18 +66,18 @@ INFO: [Synth 8-638] synthesizing module 'alarm' [C:/Users/shy_h/Documents/github
 INFO: [Synth 8-256] done synthesizing module 'alarm' (0#1) [C:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.srcs/sources_1/new/alarm.vhd:13]
 INFO: [Synth 8-256] done synthesizing module 'safe_top' (0#1) [C:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.srcs/sources_1/new/top.vhd:17]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1498.691 ; gain = 562.637
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1499.375 ; gain = 562.324
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1498.691 ; gain = 562.637
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1499.375 ; gain = 562.324
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1498.691 ; gain = 562.637
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1499.375 ; gain = 562.324
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1498.691 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1499.375 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -158,28 +154,28 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/safe_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1550.559 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1600.824 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1550.559 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1600.824 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1550.559 ; gain = 614.504
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1600.824 ; gain = 663.773
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35ticpg236-1L
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1550.559 ; gain = 614.504
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1600.824 ; gain = 663.773
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1550.559 ; gain = 614.504
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1600.824 ; gain = 663.773
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'passcode_checker'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'controller'
@@ -192,12 +188,6 @@ INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'contr
                       d3 |                               11 |                               11
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'passcode_checker'
-WARNING: [Synth 8-327] inferring latch for variable 'pass_temp_reg[1]' [C:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.srcs/sources_1/new/DisplayController.vhd:47]
-WARNING: [Synth 8-327] inferring latch for variable 'pass_temp_reg[2]' [C:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.srcs/sources_1/new/DisplayController.vhd:47]
-WARNING: [Synth 8-327] inferring latch for variable 'pass_temp_reg[3]' [C:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.srcs/sources_1/new/DisplayController.vhd:47]
-WARNING: [Synth 8-327] inferring latch for variable 'pass_temp_reg[0]' [C:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.srcs/sources_1/new/DisplayController.vhd:47]
-WARNING: [Synth 8-327] inferring latch for variable 'pass_check_reg' [C:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.srcs/sources_1/new/DisplayController.vhd:119]
-WARNING: [Synth 8-327] inferring latch for variable 'pass_index_reg' [C:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.srcs/sources_1/new/DisplayController.vhd:47]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -208,7 +198,7 @@ WARNING: [Synth 8-327] inferring latch for variable 'pass_index_reg' [C:/Users/s
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'controller'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1550.559 ; gain = 614.504
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1600.824 ; gain = 663.773
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -217,25 +207,27 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input   27 Bit       Adders := 1     
 	   2 Input   20 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 1     
 +---Registers : 
 	               32 Bit    Registers := 1     
 	               27 Bit    Registers := 1     
 	               20 Bit    Registers := 1     
-	                4 Bit    Registers := 2     
-	                1 Bit    Registers := 7     
+	                7 Bit    Registers := 1     
+	                4 Bit    Registers := 7     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 9     
 +---Muxes : 
 	   3 Input   32 Bit        Muxes := 1     
 	   2 Input   27 Bit        Muxes := 1     
 	   2 Input   20 Bit        Muxes := 1     
 	   2 Input    4 Bit        Muxes := 10    
 	   4 Input    4 Bit        Muxes := 4     
-	  16 Input    4 Bit        Muxes := 1     
+	  13 Input    4 Bit        Muxes := 1     
 	   4 Input    2 Bit        Muxes := 1     
 	   2 Input    2 Bit        Muxes := 3     
-	  16 Input    2 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 8     
+	   2 Input    1 Bit        Muxes := 9     
 	   4 Input    1 Bit        Muxes := 5     
-	  16 Input    1 Bit        Muxes := 7     
+	  12 Input    1 Bit        Muxes := 6     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -254,28 +246,27 @@ Start Cross Boundary and Area Optimization
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 WARNING: [Synth 8-3332] Sequential element (U1_PmodKYPD/PASSCHK/FSM_sequential_state_reg[1]) is unused and will be removed from module safe_top.
 WARNING: [Synth 8-3332] Sequential element (U1_PmodKYPD/PASSCHK/FSM_sequential_state_reg[0]) is unused and will be removed from module safe_top.
-WARNING: [Synth 8-3332] Sequential element (U1_PmodKYPD/DSP/pass_check_reg) is unused and will be removed from module safe_top.
 WARNING: [Synth 8-3332] Sequential element (U3_controller/FSM_onehot_state_reg[2]) is unused and will be removed from module safe_top.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1550.559 ; gain = 614.504
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1600.824 ; gain = 663.773
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1550.559 ; gain = 614.504
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1600.824 ; gain = 663.773
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1550.559 ; gain = 614.504
+Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1600.824 ; gain = 663.773
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1550.559 ; gain = 614.504
+Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1600.824 ; gain = 663.773
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -293,37 +284,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1550.559 ; gain = 614.504
+Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1600.824 ; gain = 663.773
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1550.559 ; gain = 614.504
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1600.824 ; gain = 663.773
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1550.559 ; gain = 614.504
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1600.824 ; gain = 663.773
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1550.559 ; gain = 614.504
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1600.824 ; gain = 663.773
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1550.559 ; gain = 614.504
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1600.824 ; gain = 663.773
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1550.559 ; gain = 614.504
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1600.824 ; gain = 663.773
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -341,43 +332,41 @@ Report Cell Usage:
 +------+-------+------+
 |1     |BUFG   |     1|
 |2     |CARRY4 |    21|
-|3     |LUT1   |     6|
-|4     |LUT2   |    46|
+|3     |LUT1   |     5|
+|4     |LUT2   |    17|
 |5     |LUT3   |    11|
-|6     |LUT4   |    54|
-|7     |LUT5   |    45|
-|8     |LUT6   |    58|
+|6     |LUT4   |    44|
+|7     |LUT5   |    13|
+|8     |LUT6   |    70|
 |9     |FDCE   |    52|
 |10    |FDPE   |     2|
-|11    |FDRE   |    28|
-|12    |LD     |    18|
-|13    |IBUF   |     6|
-|14    |OBUF   |    17|
+|11    |FDRE   |    24|
+|12    |IBUF   |     2|
+|13    |OBUF   |    17|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1550.559 ; gain = 614.504
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1600.824 ; gain = 663.773
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 11 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 1550.559 ; gain = 562.637
-Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1550.559 ; gain = 614.504
+Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:19 . Memory (MB): peak = 1600.824 ; gain = 562.324
+Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1600.824 ; gain = 663.773
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1550.559 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 39 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1600.824 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 21 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1550.559 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1600.824 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 18 instances were transformed.
-  LD => LDCE: 18 instances
+No Unisim elements were transformed.
 
-Synth Design complete | Checksum: 5908ed10
+Synth Design complete | Checksum: bde163bc
 INFO: [Common 17-83] Releasing license: Synthesis
-50 Infos, 38 Warnings, 22 Critical Warnings and 0 Errors encountered.
+49 Infos, 28 Warnings, 22 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1550.559 ; gain = 1016.484
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1600.824 ; gain = 1065.691
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1550.559 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1600.824 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/shy_h/Documents/github/LockingSafe/iwannadie/iwannadie.runs/synth_1/safe_top.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file safe_top_utilization_synth.rpt -pb safe_top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Nov 27 19:06:21 2025...
+INFO: [Common 17-206] Exiting Vivado at Thu Nov 27 19:26:54 2025...

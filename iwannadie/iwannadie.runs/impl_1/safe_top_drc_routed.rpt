@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date         : Thu Nov 27 19:07:16 2025
+| Date         : Thu Nov 27 19:28:10 2025
 | Host         : sh1201 running 64-bit major release  (build 9200)
 | Command      : report_drc -file safe_top_drc_routed.rpt -pb safe_top_drc_routed.pb -rpx safe_top_drc_routed.rpx
 | Design       : safe_top
@@ -24,13 +24,12 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 14
+             Violations found: 5
 +----------+----------+-----------------------------------------------------+------------+
 | Rule     | Severity | Description                                         | Violations |
 +----------+----------+-----------------------------------------------------+------------+
 | CFGBVS-1 | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
-| PDRC-153 | Warning  | Gated clock check                                   | 5          |
-| RPBF-3   | Warning  | IO port buffering is incomplete                     | 8          |
+| RPBF-3   | Warning  | IO port buffering is incomplete                     | 4          |
 +----------+----------+-----------------------------------------------------+------------+
 
 2. REPORT DETAILS
@@ -46,31 +45,6 @@ Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_des
  #where value2 is the voltage provided to configuration bank 0
 
 Refer to the device configuration user guide for more information.
-Related violations: <none>
-
-PDRC-153#1 Warning
-Gated clock check  
-Net U1_PmodKYPD/DEC/DecodeOut_reg[0]_0[0] is a gated clock net sourced by a combinational pin U1_PmodKYPD/DEC/pass_index_reg[1]_i_2/O, cell U1_PmodKYPD/DEC/pass_index_reg[1]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#2 Warning
-Gated clock check  
-Net U1_PmodKYPD/DEC/DecodeOut_reg[1]_0[0] is a gated clock net sourced by a combinational pin U1_PmodKYPD/DEC/pass_temp_reg[3][3]_i_1/O, cell U1_PmodKYPD/DEC/pass_temp_reg[3][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#3 Warning
-Gated clock check  
-Net U1_PmodKYPD/DEC/DecodeOut_reg[1]_1[0] is a gated clock net sourced by a combinational pin U1_PmodKYPD/DEC/pass_temp_reg[2][3]_i_1/O, cell U1_PmodKYPD/DEC/pass_temp_reg[2][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#4 Warning
-Gated clock check  
-Net U1_PmodKYPD/DEC/DecodeOut_reg[1]_2[0] is a gated clock net sourced by a combinational pin U1_PmodKYPD/DEC/pass_temp_reg[1][3]_i_2/O, cell U1_PmodKYPD/DEC/pass_temp_reg[1][3]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#5 Warning
-Gated clock check  
-Net U1_PmodKYPD/DEC/E[0] is a gated clock net sourced by a combinational pin U1_PmodKYPD/DEC/pass_temp_reg[0][3]_i_1/O, cell U1_PmodKYPD/DEC/pass_temp_reg[0][3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 RPBF-3#1 Warning
@@ -91,26 +65,6 @@ Related violations: <none>
 RPBF-3#4 Warning
 IO port buffering is incomplete  
 Device port JA[3] expects both input and output buffering but the buffers are incomplete.
-Related violations: <none>
-
-RPBF-3#5 Warning
-IO port buffering is incomplete  
-Device port JA[4] expects both input and output buffering but the buffers are incomplete.
-Related violations: <none>
-
-RPBF-3#6 Warning
-IO port buffering is incomplete  
-Device port JA[5] expects both input and output buffering but the buffers are incomplete.
-Related violations: <none>
-
-RPBF-3#7 Warning
-IO port buffering is incomplete  
-Device port JA[6] expects both input and output buffering but the buffers are incomplete.
-Related violations: <none>
-
-RPBF-3#8 Warning
-IO port buffering is incomplete  
-Device port JA[7] expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 
