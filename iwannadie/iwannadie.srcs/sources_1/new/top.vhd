@@ -2,7 +2,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
-entity safe_top is
+entity safe_top is--this
     port(
         clk        : in  std_logic;
         reset      : in  std_logic;
