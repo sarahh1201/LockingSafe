@@ -8,7 +8,7 @@ entity PmodKYPD_top is
         reset      : in  STD_LOGIC;
         JA         : inout  STD_LOGIC_VECTOR(7 downto 0); -- Only input
         an         : out STD_LOGIC_VECTOR(3 downto 0);
-        seg        : out STD_LOGIC_VECTOR(7 downto 0);
+        seg        : out STD_LOGIC_VECTOR(6 downto 0);
         key_valid  : inout STD_LOGIC;
         digit      : out STD_LOGIC_VECTOR(3 downto 0);
         passcode_flag : out STD_LOGIC   -- New output
@@ -28,7 +28,7 @@ architecture Structural of PmodKYPD_top is
             clk        : in  STD_LOGIC;
             Row        : in  STD_LOGIC_VECTOR(3 downto 0);
             Col        : out STD_LOGIC_VECTOR(3 downto 0);
-            DecodeOut  : out STD_LOGIC_VECTOR(3 downto 0);
+            DecodeOut  : out STD_LOGIC_VECTOR(3 downto 0)
         );
     end component;
 

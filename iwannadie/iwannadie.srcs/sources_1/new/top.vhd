@@ -26,8 +26,6 @@ architecture Structural of safe_top is
         JA         : inout  STD_LOGIC_VECTOR(7 downto 0); -- Only input
         an         : out STD_LOGIC_VECTOR(3 downto 0);
         seg        : out STD_LOGIC_VECTOR(6 downto 0);
-        enter_flag : out STD_LOGIC;
-        clear_flag : out STD_LOGIC;
         key_valid  : inout STD_LOGIC;
         digit      : out STD_LOGIC_VECTOR(3 downto 0);
         passcode_flag : out STD_LOGIC   
@@ -77,8 +75,6 @@ architecture Structural of safe_top is
     signal alarmState  : std_logic;
     signal lock_cmd    : std_logic;
     signal unlock_cmd  : std_logic;
-    signal enter_flag  : std_logic;
-    signal clear_flag  : std_logic;
     signal key_valid   : std_logic;
 
 begin
@@ -95,8 +91,6 @@ begin
             JA         => JA,
             an         => an,
             seg        => seg,
-            enter_flag => enter_flag,
-            clear_flag => clear_flag,
             key_valid  => key_valid,
             digit      => digit,
             passcode_flag => pass_flag
@@ -107,7 +101,7 @@ begin
         port map(
             clk           => clk,
             reset         => reset,
-            start         => enter_flag,
+            start         => pass_flag,
             passcode_flag => pass_flag,
             load          => load,
             done          => done,
