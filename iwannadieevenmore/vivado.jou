@@ -1,0 +1,173 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Sun Nov 30 18:18:43 2025
+# Process ID: 24856
+# Current directory: C:/Users/shy_h/Documents/github/LockingSafe/iwannadiemore
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent25360 C:\Users\shy_h\Documents\github\LockingSafe\iwannadiemore\iwannadie.xpr
+# Log file: C:/Users/shy_h/Documents/github/LockingSafe/iwannadiemore/vivado.log
+# Journal file: C:/Users/shy_h/Documents/github/LockingSafe/iwannadiemore\vivado.jou
+# Running On        :sh1201
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :26100
+# Processor Detail  :13th Gen Intel(R) Core(TM) i7-13650HX
+# CPU Frequency     :2803 MHz
+# CPU Physical cores:14
+# CPU Logical cores :20
+# Host memory       :16873 MB
+# Swap memory       :7668 MB
+# Total Virtual     :24542 MB
+# Available Virtual :2454 MB
+#-----------------------------------------------------------
+start_guioopen_project C:/Users/shy_h/Documents/github/LockingSafe/iwannadiemore/iwannadie.xpr
+update_compile_order -fileset sources_1
+synth_design -top safe_top -part xc7a35ticpg236-1L -lint 
+synth_design -top safe_top -part xc7a35ticpg236-1L -lint 
+reset_run synth_1
+launch_runs synth_1 -jobs 10
+wait_on_run synth_1
+launch_runs impl_1 -jobs 10
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+open_run synth_1 -name synth_1
+set_property IOSTANDARD LVCMOS33 [get_ports [list {an[3]} {an[2]} {an[1]} {an[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {JA[7]} {JA[6]} {JA[5]} {JA[4]} {JA[3]} {JA[2]} {JA[1]} {JA[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {seg[6]} {seg[5]} {seg[4]} {seg[3]} {seg[2]} {seg[1]} {seg[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list buzzer_out]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list chk_lock_cmd]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list chk_unlock_cmd]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list clk]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list passcode_chk]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list servoPWM]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list reset]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list start_btn]]
+place_ports start_btn U18
+place_ports buzzer_out A14
+place_ports clk W5
+place_ports reset V17
+place_ports servoPWM A15
+place_ports chk_lock_cmd U16
+place_ports chk_unlock_cmd E19
+place_ports passcode_chk L1
+place_ports {an[3]} W4
+place_ports {an[2]} V4
+place_ports {an[1]} U4
+place_ports {an[0]} U2
+place_ports {JA[7]} G3
+place_ports {JA[6]} H2
+place_ports {JA[5]} K2
+place_ports {JA[4]} H1
+place_ports {JA[3]} G2
+place_ports {JA[2]} J2
+place_ports {JA[1]} L2
+place_ports {JA[0]} J1
+place_ports {seg[6]} W7
+place_ports {seg[5]} W6
+place_ports {seg[4]} U8
+place_ports {seg[3]} V8
+place_ports {seg[2]} U5
+place_ports {seg[1]} V5
+place_ports {seg[0]} U7
+save_constraints
+refresh_design
+refresh_design
+reset_run synth_1
+launch_runs synth_1 -jobs 10
+wait_on_run synth_1
+launch_runs impl_1 -jobs 10
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/shy_h/Documents/github/LockingSafe/iwannadiemore/iwannadie.runs/impl_1/safe_top.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/shy_h/Documents/github/LockingSafe/iwannadiemore/iwannadie.runs/impl_1/safe_top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs synth_1 -jobs 10
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 10
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 10
+wait_on_run synth_1
+launch_runs impl_1 -jobs 10
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/shy_h/Documents/github/LockingSafe/iwannadiemore/iwannadie.runs/impl_1/safe_top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+undo
+reset_run synth_1
+launch_runs synth_1 -jobs 10
+wait_on_run synth_1
+launch_runs impl_1 -jobs 10
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+open_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/shy_h/Documents/github/LockingSafe/iwannadiemore/iwannadie.runs/impl_1/safe_top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs synth_1 -jobs 10
+wait_on_run synth_1
+launch_runs impl_1 -jobs 10
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/shy_h/Documents/github/LockingSafe/iwannadiemore/iwannadie.runs/impl_1/safe_top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs synth_1 -jobs 10
+wait_on_run synth_1
+launch_runs impl_1 -jobs 10
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/shy_h/Documents/github/LockingSafe/iwannadiemore/iwannadie.runs/impl_1/safe_top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+current_design synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 10
+wait_on_run synth_1
+synth_design -top safe_top -part xc7a35ticpg236-1L -lint 
+reset_run synth_1
+launch_runs synth_1 -jobs 10
+wait_on_run synth_1
+launch_runs impl_1 -jobs 10
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/shy_h/Documents/github/LockingSafe/iwannadiemore/iwannadie.runs/impl_1/safe_top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 10
+wait_on_run synth_1
+launch_runs impl_1 -jobs 10
+wait_on_run impl_1
