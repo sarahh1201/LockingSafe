@@ -37,7 +37,7 @@ LockingSafe operates as a secure entry system. The user inputs a numeric passwor
 
 ## Source Files
 
-All main source files can be found in: safe/safe.srcs/sources_1/new
+All main source files can be found [here](safe/safe.srcs/sources_1/new).
 
 
 These files implement:
